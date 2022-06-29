@@ -1,0 +1,162 @@
+.card {
+  width: 320px;
+  margin: 0 auto 67px;
+}
+
+.card__wrapper {
+  position: relative;
+
+  width: 320px;
+  height: 480px;
+
+  background-image: url("../img/back.svg");
+}
+
+.card__wrapper--muted {
+  filter: grayscale();
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../img/outline.svg"), url("../img/cat.png");
+}
+
+.card__inner:hover:not(.card__inner--muted, .card__inner--selected) {
+  background-image: url("../img/outline-hover.svg"), url("../img/cat.png");
+  cursor: pointer;
+}
+
+.card__inner--muted {
+  opacity: 0.4;
+  filter: grayscale();
+}
+
+.card__inner--selected {
+  background-image: url("../img/outline-selected.svg"), url("../img/cat.png");
+}
+
+.card__inner--selected:hover {
+  background-image:
+    url("../img/outline-selected-hover.svg"),
+    url("../img/cat.png");
+}
+
+.card__text {
+  margin-left: 50px;
+}
+
+.card__subtitle {
+  padding-top: 21px;
+
+  color: #666;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card__title {
+  color: #000;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.card__type {
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card__description {
+  margin-top: 15px;
+
+  color: #666;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__circle {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+
+  background-color: #1698d9;
+  border-radius: 50%;
+}
+
+.card__inner--selected .card__circle {
+  background-color: #d91667;
+}
+
+.card__inner--selected:hover .card__circle {
+  background-color: #e52e7a;
+}
+
+.card__inner:hover:not(.card__inner--muted, .card__inner--selected) .card__circle {
+  background-color: #2ea8e6;
+}
+
+.card__number {
+  color: #fff;
+  font-size: 42px;
+  line-height: 42px;
+}
+
+.card__kg {
+  color: #fff;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.card__comment {
+  margin-top: 14px;
+
+  color: #fff;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.card__comment-disabled {
+  color: #ff6;
+}
+
+.card__buy {
+  padding: 0;
+
+  color: #1698d9;
+
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px dashed #1698d9;
+  cursor: pointer;
+}
+
+.card__buy:hover {
+  color: #2ea8e6;
+
+  border-bottom: 1px dashed #2ea8e6;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    margin-bottom: 0;
+  }
+}

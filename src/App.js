@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import Card from './Card.js';
+import data from './data.js';
+import './css/App.css';
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    setProducts(data);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <p className="app__question">Ты сегодня покормил кота?</p>
+      <div className="app__wrapper">
+        {products.map((product) => <Card product={product} key={product.id} />)}
+      </div>
     </div>
   );
 }

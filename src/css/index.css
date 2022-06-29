@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Exo2.0";
+  src: url("../fonts/Exo2.0-Thin.woff");
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: url("../img/pattern.svg");
+}
+
+p,
+h2 {
+  margin: 0;
+}

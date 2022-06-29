@@ -1,0 +1,35 @@
+.app {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.app__question {
+  margin-bottom: 24px;
+  padding: 36px 20px 0;
+
+  color: #fff;
+  font: 36px/44px "Exo2.0", Arial, sans-serif;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .app__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .app__question {
+    padding-top: 0;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
