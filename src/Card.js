@@ -30,9 +30,9 @@ function Card({ product }) {
             <p className="card__subtitle">Сказочное заморское явство</p>
             <p className="card__title">Нямушка</p>
             <h2 className="card__type">{title}</h2>
-            <p className="card__description">
-              {description.map((str) => <p>{str}</p>)}
-            </p>
+            <div className="card__description">
+              {description.map((str) => <p key={str}>{str}</p>)}
+            </div>
           </div>
           <div className="card__circle">
             <p className="card__number">{weight}</p>
